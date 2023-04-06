@@ -8,7 +8,7 @@
   - Mai Nhật Hào
 - Các công nghệ sử dụng trong Sub-project:
   - HTML
-  - SCSS thay cho CSS thuần
+  - SCSS thay cho CSS thuần, FontAwesome cho icon
   - JavaScript (ES6), Axios để fetch dữ liệu thay cho fetch API
   - Bootstrap 5
 
