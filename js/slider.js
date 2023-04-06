@@ -1,17 +1,26 @@
-let sliderPrevBtn = document.querySelector('.main-slider-prev-btn');
-let sliderNextBtn = document.querySelector('.main-slider-next-btn');
+const sliderPrevBtn = document.querySelector('.main-slider-prev-btn');
+const sliderNextBtn = document.querySelector('.main-slider-next-btn');
 
-let slider = document.querySelector('.main-slider');
-let sliderItems = document.querySelectorAll('.main-slider__item');
+const slider = document.querySelector('.main-slider');
+const sliderItems = document.querySelectorAll('.main-slider__item');
+
+const sliderDots = document.querySelectorAll('.main-slider__dot');
 
 let currentSlide = 0;
 let maxSlide = sliderItems.length;
 
 // Set the first slide to active
 sliderItems[0].classList.add('active');
+sliderDots[0].classList.add('active');
+
+const changeDot = (dotNumber) => {
+  // Change active dot
+  document.querySelector('.main-slider__dot.active').classList.remove('active');
+  sliderDots[dotNumber].classList.add('active');
+};
 
 // Write a function to move to the next slide
-const goToSlide = () => {
+const goToNextSlide = () => {
   // Change the active class
   document
     .querySelector('.main-slider__item.active')
@@ -24,6 +33,9 @@ const goToSlide = () => {
   }
 
   sliderItems[currentSlide].classList.add('active');
+
+  // Change active dot
+  changeDot(currentSlide);
 };
 
 // Write a function to move to the previous slide
@@ -40,11 +52,30 @@ const goToPrevSlide = () => {
   }
 
   sliderItems[currentSlide].classList.add('active');
+
+  // Change active dot
+  changeDot(currentSlide);
 };
 
 // Action listeners
-sliderNextBtn.addEventListener('click', goToSlide);
+sliderNextBtn.addEventListener('click', goToNextSlide);
 sliderPrevBtn.addEventListener('click', goToPrevSlide);
+sliderDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    // Change the active class
+    document
+      .querySelector('.main-slider__item.active')
+      .classList.remove('active');
+
+    currentSlide = index;
+
+    sliderItems[currentSlide].classList.add('active');
+
+    changeDot(index);
+  });
+});
 
 // Run the function every 3 seconds
-setInterval(goToSlide, 3000);
+setInterval(() => {
+  goToNextSlide();
+}, 3000);
