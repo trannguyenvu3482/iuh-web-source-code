@@ -12,6 +12,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
 }
@@ -244,9 +245,83 @@ header {
 /* Main */
 /* ---------------------------------------------------- */
 
-/* ---------------------------------------------------- */
-/* Index Page */
-/* ---------------------------------------------------- */
+/* Index page */
+.main-slider {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 166px);
+  overflow: hidden;
+}
+
+.main-slider-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 1;
+  color: #fff;
+}
+
+.main-slider-prev-btn {
+  top: 350px;
+  left: 25px;
+  transform: translateY(-50%);
+}
+
+.main-slider-next-btn {
+  top: 350px;
+  right: 25px;
+  transform: translateY(-50%);
+}
+
+.main-slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.main-slider__item.active {
+  opacity: 1;
+}
+
+.main-slider__item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-slider__dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}
+
+.main-slider__dot i {
+  font-size: 12px;
+  color: #ccc;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.main-slider__dot.active i {
+  color: #fed700;
+  opacity: 1;
+}
 
 /* ---------------------------------------------------- */
 /* Footer */
