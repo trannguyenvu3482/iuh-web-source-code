@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png" />
+
+    <!-- Sarabun Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../css/admin.css" />
+    <title>Cửa hàng giày Sneaker chính hãng tại TPHCM - KING SHOES</title>
+  </head>
+  <body>
+    <div class="body-container">
+      <div class="sidebar">
+        <img src="../assets/img/main-logo.png" alt="" class="sidebar__logo" />
+        <ul class="sidebar__menu">
+          <li class="sidebar__menu-item active">
+            <div class="sidebar__menu-item-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <span>Thống kê</span>
+          </li>
+          <li class="sidebar__menu-item">
+            <div class="sidebar__menu-item-icon">
+              <i class="fa-solid fa-money-bill-1-wave"></i>
+            </div>
+            <span>Chi tiết</span>
+          </li>
+          <li class="sidebar__menu-item">
+            <div class="sidebar__menu-item-icon">
+              <i class="fa-solid fa-file-pen"></i>
+            </div>
+            <span>Quản lý đơn hàng</span>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="main-statistics">
+          <div class="main-statistics__item">
+            <div class="main-statistics__item-info">
+              <div class="main-statistics__item-info-title">
+                Doanh Thu Hôm Nay
+              </div>
+              <div class="main-statistics__item-info-text">
+                <div class="main-statistics__item-info-value">1,000,000đ</div>
+                <div class="main-statistics__item-info-increase">+55%</div>
+              </div>
+            </div>
+            <div class="main-statistics__item-icon">
+              <i class="fa-solid fa-money-bill-1-wave"></i>
+            </div>
+          </div>
+          <div class="main-statistics__item">
+            <div class="main-statistics__item-info">
+              <div class="main-statistics__item-info-title">
+                Lượt Truy Cập Hôm Nay
+              </div>
+              <div class="main-statistics__item-info-text">
+                <div class="main-statistics__item-info-value">2,541</div>
+                <div class="main-statistics__item-info-increase">+12%</div>
+              </div>
+            </div>
+            <div class="main-statistics__item-icon">
+              <i class="fa-solid fa-earth-europe"></i>
+            </div>
+          </div>
+          <div class="main-statistics__item">
+            <div class="main-statistics__item-info">
+              <div class="main-statistics__item-info-title">Khách Hàng Mới</div>
+              <div class="main-statistics__item-info-text">
+                <div class="main-statistics__item-info-value">562</div>
+                <div class="main-statistics__item-info-increase">+5%</div>
+              </div>
+            </div>
+            <div class="main-statistics__item-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+          <div class="main-statistics__item">
+            <div class="main-statistics__item-info">
+              <div class="main-statistics__item-info-title">Tổng Doanh Thu</div>
+              <div class="main-statistics__item-info-text">
+                <div class="main-statistics__item-info-value">27.600.400đ</div>
+                <div class="main-statistics__item-info-increase">+22%</div>
+              </div>
+            </div>
+            <div class="main-statistics__item-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+        <div class="main-graphs">
+          <div class="active-users__graph">
+            <canvas id="bar-chart"></canvas>
+            <div class="active-users__graph-info">
+              <div class="active-users__graph-title"></div>
+              <div class="active-users__graph-statistics">
+                <div class="active-users__graph-statistics-item">
+                  <div class="active-users__graph-statistics-item-icon">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div class="active-users__graph-statistics-item-info">
+                    <div class="active-users__graph-statistics-item-info-title">
+                      Khách Hàng Mới
+                    </div>
+                    <div class="active-users__graph-statistics-item-info-value">
+                      562
+                    </div>
+                  </div>
+                </div>
+                <div class="active-users__graph-statistics-item">
+                  <div class="active-users__graph-statistics-item-icon">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div class="active-users__graph-statistics-item-info">
+                    <div class="active-users__graph-statistics-item-info-title">
+                      Khách Hàng Mới
+                    </div>
+                    <div class="active-users__graph-statistics-item-info-value">
+                      562
+                    </div>
+                  </div>
+                </div>
+                <div class="active-users__graph-statistics-item">
+                  <div class="active-users__graph-statistics-item-icon">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div class="active-users__graph-statistics-item-info">
+                    <div class="active-users__graph-statistics-item-info-title">
+                      Khách Hàng Mới
+                    </div>
+                    <div class="active-users__graph-statistics-item-info-value">
+                      562
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sales__graph">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </div>
+        <div class="main-projects-orders">
+          <div class="main-projects"></div>
+
+          <div class="main-orders"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- ChartJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  <script src="../js/admin.js"></script>
+  <script src="../js/adminCharts.js"></script>
+</html>
