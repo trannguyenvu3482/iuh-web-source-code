@@ -24,39 +24,39 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <title>Cửa hàng giày Sneaker chính hãng tại TPHCM - KING SHOES</title>
   </head>
   <body>
     <div class="container">
-      <div class="sidebar">
-        <img src="../assets/img/main-logo.png" alt="" class="sidebar__logo" />
-        <ul class="sidebar__menu">
-          <li class="sidebar__menu-item active">
-            <div class="sidebar__menu-item-icon">
-              <i class="fas fa-home"></i>
-            </div>
-            <span>Thống kê</span>
-          </li>
-          <li class="sidebar__menu-item">
-            <div class="sidebar__menu-item-icon">
-              <i class="fa-solid fa-money-bill-1-wave"></i>
-            </div>
-            <span>Chi tiết</span>
-          </li>
-          <li class="sidebar__menu-item">
-            <div class="sidebar__menu-item-icon">
-              <i class="fa-solid fa-file-pen"></i>
-            </div>
-            <span>Quản lý đơn hàng</span>
-          </li>
-        </ul>
-      </div>
-      <div class="main">
-        <h1>Hello World</h1>
+      <div class="login-form">
+        <img src="../assets/img/main-logo.png" alt="" />
+        <div class="login-form-section">
+          <span class="login-form-username">Username:</span>
+          <input
+            type="text"
+            class="login-input username-input"
+            placeholder="Username"
+            required
+            autofocus
+            autocomplete="off"
+          />
+        </div>
+        <div class="login-form-section">
+          <span class="login-form-password">Password:</span>
+          <input
+            type="password"
+            class="login-input password-input"
+            placeholder="Password"
+            required
+            autocomplete="off"
+          />
+        </div>
+
+        <button class="login-submit">Login</button>
       </div>
     </div>
   </body>
 
-  <script src="../js/admin.js"></script>
+  <script src="../js/login.js"></script>
 </html>

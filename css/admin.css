@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+}
+
+.container {
+  display: flex;
+
+  background-color: #f8f9fa;
+  height: 100vh;
+  margin: 0 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 20px;
+  height: 800px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar__logo {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar__menu-item {
+  width: 220px;
+  height: 58px;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 20px;
+}
+
+.sidebar__menu-item.active {
+  background: #fff;
+}
+
+.sidebar__menu-item-icon {
+  box-shadow: 0 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 8px;
+}
+
+.sidebar__menu-item-icon i {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.sidebar__menu-item.active .sidebar__menu-item-icon i {
+  color: #fff;
+  background: #cb0c9f;
+}
+
+.main {
+  margin: 20px 40px;
+}
