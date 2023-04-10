@@ -3,7 +3,6 @@
   --main-yellow-color: #fed700;
 }
 
-
 * {
   padding: 0;
   margin: 0;
@@ -132,7 +131,13 @@ header.sticky {
 .submenu {
   position: absolute;
   left: 0;
-  bottom: -78px;
+  top: 80px;
+
+  display: none;
+}
+
+.header__bottom-menu-item:hover .submenu {
+  display: block;
 }
 
 .submenu ul {
@@ -526,3 +531,8 @@ header.sticky {
 /* ---------------------------------------------------- */
 /* Footer */
 /* ---------------------------------------------------- */
+footer {
+  height: 800px;
+  background-color: #000;
+  margin-top: 40px;
+}

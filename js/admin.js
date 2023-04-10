@@ -1,4 +1,11 @@
+const logout = document.querySelector('.main-menu-bar button');
+
 if (sessionStorage.getItem('username') === null) {
-  alert('Please login first!');
   window.location.href = 'login.html';
+  alert('Please login first!');
 }
+
+logout.addEventListener('click', () => {
+  sessionStorage.removeItem('username');
+  window.location.href = 'login.html';
+});

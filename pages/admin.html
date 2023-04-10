@@ -26,6 +26,9 @@
     />
 
     <link rel="stylesheet" href="../css/admin.css" />
+
+    <script src="../js/admin.js"></script>
+
     <title>Cửa hàng giày Sneaker chính hãng tại TPHCM - KING SHOES</title>
   </head>
   <body>
@@ -54,6 +57,14 @@
         </ul>
       </div>
       <div class="main">
+        <div class="main-menu-bar">
+          <h1>Hello, Admin</h1>
+          <button>
+            Logout
+
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
         <div class="main-statistics">
           <div class="main-statistics__item">
             <div class="main-statistics__item-info">
@@ -112,7 +123,6 @@
           <div class="active-users__graph">
             <canvas id="bar-chart"></canvas>
             <div class="active-users__graph-info">
-              <div class="active-users__graph-title"></div>
               <div class="active-users__graph-statistics">
                 <div class="active-users__graph-statistics-item">
                   <div class="active-users__graph-statistics-item-icon">
@@ -133,7 +143,7 @@
                   </div>
                   <div class="active-users__graph-statistics-item-info">
                     <div class="active-users__graph-statistics-item-info-title">
-                      Khách Hàng Mới
+                      Lượng Truy Cập
                     </div>
                     <div class="active-users__graph-statistics-item-info-value">
                       562
@@ -161,10 +171,106 @@
             <canvas id="line-chart"></canvas>
           </div>
         </div>
-        <div class="main-projects-orders">
-          <div class="main-projects"></div>
+        <div class="main-orders">
+          <h3>Danh sách đơn hàng</h3>
+          <table class="main-orders-tbl">
+            <tr class="main-orders-tbl__header">
+              <th class="main-orders-tbl__header-item">Mã Đơn Hàng</th>
+              <th class="main-orders-tbl__header-item">Khách Hàng</th>
+              <th class="main-orders-tbl__header-item">Số Điện Thoại</th>
+              <th class="main-orders-tbl__header-item">Địa Chỉ</th>
+              <th class="main-orders-tbl__header-item">Tổng Tiền</th>
+              <th class="main-orders-tbl__header-item">Trạng Thái</th>
+              <th class="main-orders-tbl__header-item">Thời Gian</th>
+              <th class="main-orders-tbl__header-item">Hành Động</th>
+            </tr>
+            <tr class="main-orders-tbl__row">
+              <td class="main-orders-tbl__row-item">1</td>
+              <td class="main-orders-tbl__row-item">Nguyễn Văn A</td>
+              <td class="main-orders-tbl__row-item">0123456789</td>
+              <td class="main-orders-tbl__row-item">Hà Nội</td>
+              <td class="main-orders-tbl__row-item">1,000,000đ</td>
+              <td class="main-orders-tbl__row-item">Đã Giao</td>
+              <td class="main-orders-tbl__row-item">12/12/2020</td>
+              <td class="main-orders-tbl__row-item">
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="main-orders-tbl__row">
+              <td class="main-orders-tbl__row-item">2</td>
+              <td class="main-orders-tbl__row-item">Nguyễn Văn A</td>
+              <td class="main-orders-tbl__row-item">0123456789</td>
+              <td class="main-orders-tbl__row-item">Hà Nội</td>
+              <td class="main-orders-tbl__row-item">1,000,000đ</td>
+              <td class="main-orders-tbl__row-item">Đã Giao</td>
+              <td class="main-orders-tbl__row-item">12/12/2020</td>
+              <td class="main-orders-tbl__row-item">
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="main-orders-tbl__row">
+              <td class="main-orders-tbl__row-item">3</td>
+              <td class="main-orders-tbl__row-item">Nguyễn Văn A</td>
+              <td class="main-orders-tbl__row-item">0123456789</td>
+              <td class="main-orders-tbl__row-item">Hà Nội</td>
+              <td class="main-orders-tbl__row-item">1,000,000đ</td>
+              <td class="main-orders-tbl__row-item">Đã Giao</td>
+              <td class="main-orders-tbl__row-item">12/12/2020</td>
+              <td class="main-orders-tbl__row-item">
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
 
-          <div class="main-orders"></div>
+            <tr class="main-orders-tbl__row">
+              <td class="main-orders-tbl__row-item">4</td>
+              <td class="main-orders-tbl__row-item">Nguyễn Văn A</td>
+              <td class="main-orders-tbl__row-item">0123456789</td>
+              <td class="main-orders-tbl__row-item">Hà Nội</td>
+              <td class="main-orders-tbl__row-item">1,000,000đ</td>
+              <td class="main-orders-tbl__row-item">Đã Giao</td>
+              <td class="main-orders-tbl__row-item">12/12/2020</td>
+              <td class="main-orders-tbl__row-item">
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="main-orders-tbl__row">
+              <td class="main-orders-tbl__row-item">5</td>
+              <td class="main-orders-tbl__row-item">Nguyễn Văn A</td>
+              <td class="main-orders-tbl__row-item">0123456789</td>
+              <td class="main-orders-tbl__row-item">Hà Nội</td>
+              <td class="main-orders-tbl__row-item">1,000,000đ</td>
+              <td class="main-orders-tbl__row-item">Đã Giao</td>
+              <td class="main-orders-tbl__row-item">12/12/2020</td>
+              <td class="main-orders-tbl__row-item">
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="main-orders-tbl__row-item-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
@@ -173,6 +279,5 @@
   <!-- ChartJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-  <script src="../js/admin.js"></script>
   <script src="../js/adminCharts.js"></script>
 </html>

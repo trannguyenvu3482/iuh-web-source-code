@@ -12,7 +12,6 @@ body {
   display: flex;
 
   background-color: #f8f9fa;
-  height: 100vh;
   margin: 0 10px;
 }
 
@@ -90,6 +89,34 @@ body {
 .main {
   margin: 20px 40px 20px 60px;
   width: 100%;
+}
+
+.main-menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.main-menu-bar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #000;
+}
+
+.main-menu-bar button:hover {
+  color: white;
+  background: red;
 }
 
 .main-statistics {
@@ -177,6 +204,42 @@ body {
   padding: 20px;
 }
 
+.active-users__graph-info {
+}
+
+.active-users__graph-statistics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-users__graph-statistics-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-users__graph-statistics-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-users__graph-statistics-item-icon {
+  font-size: 30px;
+}
+
+.active-users__graph-statistics-item-info-title {
+  color: #bbb;
+}
+
+.active-users__graph-statistics-item-info-value {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .active-users__graph canvas {
   width: 100% !important;
 }
@@ -191,4 +254,63 @@ body {
 
 .sales__graph canvas {
   width: 100% !important;
+}
+
+.main-orders {
+  width: 100%;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.main-orders h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #67748e;
+  margin-bottom: 20px;
+}
+
+.main-orders-tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.main-orders-tbl__header {
+  background: #f5f5f5;
+}
+
+.main-orders-tbl__header-item {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #67748e;
+}
+
+.main-orders-tbl__row {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.main-orders-tbl__row:last-child {
+  border-bottom: none;
+}
+
+.main-orders-tbl__row-item {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #67748e;
+  text-align: center;
+
+  border-right: 1px solid #f5f5f5;
+}
+
+.main-orders-tbl__row-item-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  color: #67748e;
+  padding: 10px;
+  border-radius: 8px;
 }
