@@ -1,0 +1,98 @@
+.giohang{
+    display: flex;
+    }
+    
+    img{
+        width: 30%;
+    }
+    
+    .size{
+        background-color: yellow;
+        font-weight: bold;
+        border-radius: 3px;
+        padding: 3px;
+        width: fit-content;
+    }
+    
+    .MASP{
+        color: gray;
+        font-weight: bold;
+    }
+    
+    .quantity{
+        display: flex;
+        font-weight: bold;
+    }
+    
+    .quantity button{
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 1px;
+    }
+    
+    .quantity p{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        height: 23px;
+        margin-top: 0;
+    }
+    
+    .quantity span{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .price{
+        font-weight: bold;
+        color: red;
+    }
+    
+    .price::first-letter{
+        color: black;
+    }
+    
+    .thanhtien{
+        color: gray;
+        font-weight: bold;
+    }
+    
+    
+    .cc3m{
+        margin-left: -15%;
+    }
+    
+    .cancel{
+        background-color: red;
+        border-radius: 50%;
+        padding: 10px;
+        width: 20px;
+        height: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .tongtien{
+        font-weight: bold;
+        margin-left: 50%;
+    }
+    .buy button{
+        font-size: large;
+        font-weight: bold;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: yellow;
+        border-radius: 30px;
+        border: solid yellow;
+        box-shadow: 0 0 3px 3px gray;
+        margin-left: 20px;
+    }
+    
+    .result{
+        float: right;
+    }
