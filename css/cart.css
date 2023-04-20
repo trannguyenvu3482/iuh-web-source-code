@@ -1,98 +1,142 @@
+.muahang{
+    border: 1px solid gray;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 180px;
+    margin-bottom: 30px;
+    padding-bottom: 80px;
+    padding-top: 20px;
+}
+
+.muahang>h2{
+    margin-left: 15px;
+    color: gray;
+    padding-bottom: 20px;
+}
+
+.giohang img{
+    width: 20%;
+    margin: 10px;
+}
+
+
 .giohang{
     display: flex;
-    }
-    
-    img{
-        width: 30%;
-    }
-    
-    .size{
-        background-color: yellow;
-        font-weight: bold;
-        border-radius: 3px;
-        padding: 3px;
-        width: fit-content;
-    }
-    
-    .MASP{
-        color: gray;
-        font-weight: bold;
-    }
-    
-    .quantity{
-        display: flex;
-        font-weight: bold;
-    }
-    
-    .quantity button{
-        height: 30px;
-        width: 30px;
-        background-color: white;
-        border: 1px solid gray;
-        border-radius: 1px;
-    }
-    
-    .quantity p{
-        border-top: 1px solid gray;
-        border-bottom: 1px solid gray;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 5px;
-        height: 23px;
-        margin-top: 0;
-    }
-    
-    .quantity span{
-        margin-top: 5px;
-        margin-left: 15px;
-    }
-    
-    .price{
-        font-weight: bold;
-        color: red;
-    }
-    
-    .price::first-letter{
-        color: black;
-    }
-    
-    .thanhtien{
-        color: gray;
-        font-weight: bold;
-    }
-    
-    
-    .cc3m{
-        margin-left: -15%;
-    }
-    
-    .cancel{
-        background-color: red;
-        border-radius: 50%;
-        padding: 10px;
-        width: 20px;
-        height: 20px;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-    }
-    
-    .tongtien{
-        font-weight: bold;
-        margin-left: 50%;
-    }
-    .buy button{
-        font-size: large;
-        font-weight: bold;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: yellow;
-        border-radius: 30px;
-        border: solid yellow;
-        box-shadow: 0 0 3px 3px gray;
-        margin-left: 20px;
-    }
-    
-    .result{
-        float: right;
-    }
+}
+.main-product__info-title {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #313131;
+    text-transform: uppercase;
+}
+.main-cart__info{
+    margin-left: -780px;
+}
+
+.size{
+    background-color: #ffd600;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 3px;
+    width: fit-content;
+}
+
+.main-product__info-shoes-id {
+    font-size: 18px;
+    color: #5b5b5b;
+  }
+  
+  .main-product__info-shoes-id span {
+    font-weight: 700;
+  }
+
+.quantity{
+    display: flex;
+    font-weight: bold;
+}
+
+.quantity button{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 1px;
+}
+
+.quantity p{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    margin-top: 0;
+}
+
+.quantity span{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.main-product__info-price {
+    font-weight: 700px;
+    color: red;
+}
+
+.price::first-letter{
+    color: black;
+}
+
+.thanhtien{
+    color: gray;
+    font-weight: bold;
+}
+
+.cancel{
+    border: solid red;
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    margin-left: 230px;
+    margin-top: 40px;
+}
+
+.tongtien{
+    font-weight: bold;
+    margin-left: 80%;
+}
+.buy button{
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: yellow;
+    border-radius: 30px;
+    border: solid yellow;
+    box-shadow: 0 0 3px 3px gray;
+    margin-left: 20px;
+    float: right;
+}
+.buy button:hover,
+.buy button:hover{
+    background: #000 !important;
+    color: #fcd603 !important;
+}
+
+.buy:last-child{
+    margin-right: 30px;
+}
+.result{
+    padding-top: 20px;
+}
+
+hr{
+    color: gray;
+    margin-left: 15px;
+    margin-right: 15px;
+}
