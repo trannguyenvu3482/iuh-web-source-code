@@ -4,11 +4,27 @@ let itemQuantityDecBtns;
 let itemQuantityIncBtns;
 let cart;
 
+// cart = {
+//   items: [
+//     {
+//       id: 1,
+//       quantity: 1,
+//       price: 200000,
+//       totalPrice: 200000,
+//     },
+//   ],
+//   totalPrice: 200000,
+// };
+
+// localStorage.setItem('cart', JSON.stringify(cart));
+
 const getItemHTML = (shoes, item) => {
   const price = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND',
   }).format(shoes.currentPrice);
+
+  console.log(item.totalPrice);
 
   const totalPrice = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
@@ -68,11 +84,24 @@ const loadDataToUI = async () => {
   // Load data to UI
   const cartList = document.querySelector('.cart-list');
 
+  cart.totalPrice = 0;
   await cart.items.forEach(async (item) => {
     const shoes = await getShoesById(item.id);
+
+    // Set price for item
+    item.price = shoes.currentPrice;
+    item.totalPrice = item.quantity * item.price;
+    cart.totalPrice += item.totalPrice;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
     const html = getItemHTML(shoes, item);
     cartList.insertAdjacentHTML('beforeend', html);
   });
+
+  console.log('After', cart.totalPrice);
+
+  localStorage.setItem('cart', JSON.stringify(cart));
 
   // Render total price to UI
   const totalPriceOfCart = document.querySelector('.cart-total');
@@ -97,16 +126,45 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   handleQuantityBtns();
   console.log('Handle quantity');
+
+  updateCartTotalPrice();
 });
 
 // Handle remove item
 const handleRemoveItem = () => {
-  const removeBtns = document.querySelectorAll('.cart-list__item-remove-btn');
-  removeBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+  const itemList = document.querySelector('.cart-list');
+
+  itemList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('cart-list__item-remove-btn')) {
       const item = e.target.closest('.cart-list__item');
+      const itemIndex = Array.from(item.parentElement.children).indexOf(item);
+
+      // Remove item from cart
+      cart.items.splice(itemIndex, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Remove item from UI
       item.remove();
-    });
+
+      // Update total price in cart
+      cart.totalPrice = 0;
+      cart.items.forEach((item) => {
+        cart.totalPrice += item.totalPrice;
+      });
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Render total price to UI
+      const totalPriceOfCart = document.querySelector('.cart-total');
+      totalPriceOfCart.innerHTML = `
+        Tổng tiền:
+        <span class="cart-total__price">
+          ${new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND',
+          }).format(cart.totalPrice)}
+        </span>
+      `;
+    }
   });
 };
 
@@ -170,8 +228,6 @@ const handleQuantityInc = (e) => {
   const item = e.target.closest('.cart-list__item');
   const itemIndex = Array.from(item.parentElement.children).indexOf(item);
 
-  console.log(cart);
-
   // Update cart
   cart.items[itemIndex].quantity = quantityValue + 1;
   cart.items[itemIndex].totalPrice =
@@ -216,10 +272,36 @@ const handleQuantityBtns = () => {
   itemList.addEventListener('click', (e) => {
     if (e.target.classList.contains('cart-list__item-quantity-btn-dec')) {
       handleQuantityDec(e);
+      saveCartToLocalStore();
     } else if (
       e.target.classList.contains('cart-list__item-quantity-btn-inc')
     ) {
       handleQuantityInc(e);
+      saveCartToLocalStore();
     }
   });
+};
+
+const saveCartToLocalStore = () => {
+  localStorage.setItem('cart', JSON.stringify(cart));
+};
+
+const updateCartTotalPrice = () => {
+  cart.totalPrice = 0;
+  cart.items.forEach((item) => {
+    cart.totalPrice += item.totalPrice;
+  });
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Render total price to UI
+  const totalPriceOfCart = document.querySelector('.cart-total');
+  totalPriceOfCart.innerHTML = `
+    Tổng tiền:
+    <span class="cart-total__price">
+      ${new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+      }).format(cart.totalPrice)}
+    </span>
+  `;
 };

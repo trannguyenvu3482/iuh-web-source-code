@@ -5,6 +5,8 @@ if (sessionStorage.getItem('username') === null) {
   alert('Please login first!');
 }
 
+
+// TODO: Đăng xuất
 logout.addEventListener('click', () => {
   sessionStorage.removeItem('username');
   window.location.href = 'login.html';
