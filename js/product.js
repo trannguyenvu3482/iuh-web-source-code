@@ -1,3 +1,4 @@
+import { getShoesById } from '../api/shoesAPI.js';
 let mainImage = document.querySelector('.main-product__image-main');
 let images = document.querySelectorAll('.main-product__image-preview-item');
 
@@ -24,24 +25,6 @@ const getQueryString = () => {
 
   return result;
 };
-
-// Get product id from query string
-const productId = getQueryString().id;
-
-console.log(productId);
-
-// Fetch product data from API
-const getProduct = async () => {
-  const response = await fetch(
-    `https://6421447c34d6cd4ebd6ecd50.mockapi.io/api/v1/shoes/${productId}`
-  );
-  const data = await response.json();
-  return data;
-};
-
-getProduct().then((data) => {
-  console.log(data);
-});
 
 // Zoom image handler
 mainImage.addEventListener('mousemove', (e) => {
@@ -105,4 +88,57 @@ sizes.forEach((size) => {
     // Add active class to current size
     e.target.classList.add('active');
   });
+});
+
+// Load to UI from data
+const loadUI = (shoes) => {
+  const shoesName = document.querySelector('.main-product__info-title');
+  const shoesID = document.querySelector('.main-product__info-shoes-id span');
+  const price = document.querySelector('.main-product__info-price');
+  const subtitle = document.querySelector('.main-product__info-subtitle');
+  const sizeContainer = document.querySelector('.main-product__info-sizes');
+  const mainImage = document.querySelector('.main-product__image-main');
+
+  const imagesContainer = document.querySelector(
+    '.main-product__image-preview'
+  );
+
+  // Update images
+  const imagesHTMLs = shoes.images.map((image) => {
+    return `
+      <div class="main-product__image-preview-item">
+        <img src="${image}" alt="shoes" />
+      </div>
+    `;
+  });
+
+  imagesContainer.innerHTML = imagesHTMLs.join('');
+  imagesContainer.firstElementChild.classList.add('active');
+  mainImage.style.backgroundImage = `url(${shoes.images[0]})`;
+
+  // Update fields
+  shoesName.textContent = shoes.name;
+  shoesID.textContent = shoes.id;
+  price.textContent = shoes.price;
+  subtitle.textContent = shoes.subtitle ? shoes.subtitle : '';
+
+  // Update sizes
+  const sizesHTMLs = shoes.size.map((size) => {
+    return `
+      <div class="main-product__info-size">${size}</div>
+    `;
+  });
+
+  sizeContainer.innerHTML = sizesHTMLs.join('');
+  sizeContainer.firstElementChild.classList.add('active');
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const queryString = getQueryString();
+  const productId = queryString.id;
+  const shoes = await getShoesById(productId);
+
+  console.log(shoes);
+
+  loadUI(shoes);
 });
