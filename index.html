@@ -56,18 +56,56 @@
             </li>
             <li class="header__bottom-menu-item">
               <a href="#">Nike</a>
+
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Nam</a></li>
+                  <li><a href="#">Nữ</a></li>
+                </ul>
+              </div>
             </li>
             <li class="header__bottom-menu-item">
               <a href="#">Adidas</a>
+
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Nam</a></li>
+                  <li><a href="#">Nữ</a></li>
+                </ul>
+              </div>
             </li>
             <li class="header__bottom-menu-item">
               <a href="#">Jordan</a>
+
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Air Jordan</a></li>
+                </ul>
+              </div>
             </li>
             <li class="header__bottom-menu-item">
               <a href="#">Jeezy</a>
+
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Jeezy Boost 350</a></li>
+                  <li><a href="#">Jeezy Boost 750</a></li>
+                </ul>
+              </div>
             </li>
             <li class="header__bottom-menu-item">
               <a href="#">Other brands</a>
+
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Sneaker Authentic</a></li>
+                  <li><a href="#">Giày thể thao chạy bộ - Tập Gym</a></li>
+                  <li><a href="#">Giày Tennis Nike Chính Hãng</a></li>
+                  <li><a href="#">Dép Authentic</a></li>
+                  <li><a href="#">Crep Protect Vệ Sinh Giày Sneaker</a></li>
+                  <li><a href="#">Giày Thanh Lý</a></li>
+                </ul>
+              </div>
             </li>
             <li class="header__bottom-menu-item">
               <a href="#">Sale</a>
@@ -79,7 +117,7 @@
               <a href="#">Spa giày</a>
             </li>
             <li class="header__bottom-menu-item">
-              <a href="#">Liên hệ</a>
+              <a href="/pages/lien-he.html">Liên hệ</a>
             </li>
           </ul>
           <div class="header__bottom-search-cart">
@@ -90,7 +128,7 @@
               </button>
             </div>
             <div class="header__bottom-cart">
-              <a href="/cart" class="header__bottom-cart-link">
+              <a href="/pages/cart.html" class="header__bottom-cart-link">
                 <i class="fa-solid fa-shopping-cart"></i>
                 <span class="header__bottom-cart-quantity">0</span>
               </a>
@@ -100,18 +138,903 @@
       </header>
 
       <main>
-        <div class="main-slider"></div>
+        <div class="main-slider">
+          <div class="main-slider-btn main-slider-prev-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
 
-        <div class="main-hero"></div>
+          <div class="main-slider__item">
+            <a href="#">
+              <img src="./assets/img/slider-1.jpg" alt="" />
+            </a>
+          </div>
+          <div class="main-slider__item">
+            <a href="#">
+              <img src="./assets/img/slider-2.png" alt="" />
+            </a>
+          </div>
+          <div class="main-slider__item">
+            <a href="#">
+              <img src="./assets/img/slider-3.jpg" alt="" />
+            </a>
+          </div>
 
-        <div class="main-content">
-          <div class="main-container"></div>
+          <div class="main-slider-btn main-slider-next-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="main-slider__dots">
+            <div class="main-slider__dot">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+            <div class="main-slider__dot">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+            <div class="main-slider__dot">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+          </div>
         </div>
 
-        <div class="main-subscribe"></div>
+        <div class="main-hero">
+          <div class="main-hero__item">
+            <i class="fa-solid fa-wallet"></i>
+            <h3 class="main-hero__item-title">Cam kết chính hãng</h3>
+            <span class="main-hero__item-subtitle">100 % Authentic</span>
+            <p class="main-hero__item-desc">
+              Cam kết sản phẩm chính hãng từ Châu Âu, Châu Mỹ...
+            </p>
+          </div>
+          <div class="main-hero__item">
+            <i class="fa-solid fa-truck"></i>
+            <h3 class="main-hero__item-title">GIAO HÀNG HỎA TỐC</h3>
+            <span class="main-hero__item-subtitle">Express delivery</span>
+            <p class="main-hero__item-desc">
+              SHIP hỏa tốc 1h nhận hàng trong nội thành HCM
+            </p>
+          </div>
+          <div class="main-hero__item">
+            <i class="fa-solid fa-phone"></i>
+            <h3 class="main-hero__item-title">HỖ TRỢ 24/24</h3>
+            <span class="main-hero__item-subtitle">Supporting 24/24</span>
+            <p class="main-hero__item-desc">Gọi ngay</p>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div class="main-container">
+            <section class="main-section new-products">
+              <div class="main-section__title">
+                <h1>PRODUCT</h1>
+                <a href="#"> - SẢN PHẨM MỚI</a>
+              </div>
+
+              <div class="main-section__grid-products">
+                <a
+                  href="/pages/product.html?id=1"
+                  class="main-section__grid-product"
+                >
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="main-section__products-pagination">
+                <a
+                  href="#"
+                  class="main-section__products-pagination-item active"
+                >
+                  1
+                </a>
+                <a href="#" class="main-section__products-pagination-item">
+                  2
+                </a>
+                <a href="#" class="main-section__products-pagination-item">
+                  3
+                </a>
+                <a href="#" class="main-section__products-pagination-item">
+                  4
+                </a>
+                <a href="#" class="main-section__products-pagination-item">
+                  >
+                </a>
+                <a href="#" class="main-section__products-pagination-item">
+                  >>
+                </a>
+              </div>
+            </section>
+            <section class="hot-products">
+              <div class="hot-products-header">
+                <div class="main-section__title">
+                  <h1>HOT</h1>
+                  <a href="#"> - SẢN PHẨM HOT</a>
+                </div>
+                <div class="hot-products-nav">
+                  <button class="hot-products-nav-btn">
+                    <i class="fa-solid fa-chevron-left"></i></button
+                  ><button class="hot-products-nav-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="hot-products-list">
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section class="sale-products">
+              <div class="hot-products-header">
+                <div class="main-section__title">
+                  <h1>DISCOUNT</h1>
+                  <a href="#"> - SẢN PHẨM KHUYẾN MÃI</a>
+                </div>
+                <div class="hot-products-nav">
+                  <button class="hot-products-nav-btn">
+                    <i class="fa-solid fa-chevron-left"></i></button
+                  ><button class="hot-products-nav-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="hot-products-list">
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section class="accessories-products">
+              <div class="hot-products-header">
+                <div class="main-section__title">
+                  <h1>ACCESSORIES</h1>
+                  <a href="#"> - PHỤ KIỆN</a>
+                </div>
+                <div class="hot-products-nav">
+                  <button class="hot-products-nav-btn">
+                    <i class="fa-solid fa-chevron-left"></i></button
+                  ><button class="hot-products-nav-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="hot-products-list">
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+                <a href="#" class="main-section__grid-product">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg"
+                    alt=""
+                  />
+                  <div class="main-section__grid-product-info">
+                    <h3 class="main-section__grid-product-info-title">
+                      Superstar
+                    </h3>
+                    <span class="main-section__grid-product-info-ratings">
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </span>
+                    <p class="main-section__grid-product-info-price">
+                      2,200,000 đ
+                    </p>
+
+                    <span class="main-section__grid-product-new-tag">New</span>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section class="news">
+              <div class="hot-products-header">
+                <div class="main-section__title">
+                  <h1>NEWS</h1>
+                  <a href="#"> - TIN TỨC MỚI</a>
+                </div>
+                <div class="hot-products-nav">
+                  <button class="news-nav-btn">
+                    Xem thêm <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="news-list">
+                <a href="#" class="news-list__item">
+                  <img
+                    src="https://kingshoes.vn/data/upload/media/mua-giay-chay-bo-nike-air-zoom-pegasus-39-o-dau-top-10-store-uy-tin-tai-quan-tan-binh.png"
+                    alt=""
+                  />
+                  <div class="news-list__item-info">
+                    <h3 class="news-list__item-info-title">
+                      Mua giày chạy bộ Nike Air Zoom Pegasus 39 ở đâu? Top 10
+                      store uy tín tại Quận Tân Bình
+                    </h3>
+                    <p class="news-list__item-info-desc">
+                      Mua giày chạy bộ Nike Air Zoom Pegasus 39 ở đâu? Top 10
+                      store uy tín tại Quận Tân Bình
+                    </p>
+                  </div>
+                  <button class="news-list__item-see-more-btn">
+                    Xem thêm <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="main-subscribe">
+          <div class="main-subcribe-text">
+            <i class="fa-solid fa-envelope"></i> ĐĂNG KÝ NHẬN CODE
+          </div>
+          <div class="main-subscribe-email">
+            <input
+              class="main-subscribe-input"
+              type="text"
+              placeholder="Địa chỉ mail của bạn"
+            />
+            <button>Đăng ký</button>
+          </div>
+          <div class="main-subcribe-tag">
+            ...Nhận Ngay <span>VOUCHER 100k</span> từ chúng tôi.
+          </div>
+        </div>
       </main>
 
-      <footer></footer>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-info">
+            <img src="./assets/img/round-logo.png" alt="" />
+            <h2>THÔNG TIN LIÊN HỆ</h2>
+
+            <span>KINGSHOES.VN Trang Thông Tin Chính Thức.</span>
+
+            <span
+              >⛪ Địa chỉ: 192/2 Nguyễn Thái Bình, Phường 12, Quận Tân Bình,
+              Thành <br />
+              phố Hồ Chí Minh</span
+            >
+
+            <span>Email : cskh.kingshoes.vn@gmail.com</span>
+
+            <a href="#">https://kingshoes.vn/</a>
+
+            <a href="#">https://twitter.com/KingShoes_vn</a>
+
+            <a href="#">https://instagram.com/KingShoes.vn</a>
+
+            <a href="#">https://facebook.com/pg/www.KingShoes.vn</a>
+
+            <a href="#">https://www.youtube.com/www.KingShoes.vn</a>
+
+            <a href="#">http://bit.ly/KINGSHOES_map</a>
+
+            <a href="#">https://www.tiktok.com/@kingshoes_sneaker</a>
+
+            <span>☎️ Hotline Bán Hàng: 0909.300.746 - 0909.45.0001</span>
+
+            <span>☎️ Hotline CSKH: 0902.368.001</span>
+
+            <div
+              data-oembed-url="https://www.youtube.com/embed/epcfWIT_Ais?rel=0"
+            >
+              <div
+                style="
+                  left: 0;
+                  width: 97%;
+                  position: relative;
+                  padding-bottom: 53.25%;
+                "
+              >
+                <iframe
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                  allowfullscreen=""
+                  scrolling="no"
+                  src="https://www.youtube.com/embed/epcfWIT_Ais?rel=0"
+                  style="
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border: 0;
+                  "
+                  tabindex="-1"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-links-top">
+              <div class="footer-links-top__col">
+                <h2>HỖ TRỢ KHÁCH HÀNG</h2>
+
+                <a href="#">Chăm sóc khách hàng</a>
+                <a href="#">Thanh toán</a>
+                <a href="#">Hướng dẫn mua hàng</a>
+              </div>
+              <div class="footer-links-top__col">
+                <h2>CHÍNH SÁCH</h2>
+
+                <a href="#">Chế độ bảo hành</a>
+                <a href="#">Chính sách đổi hàng</a>
+                <a href="#">Bảo mật thông tin</a>
+                <a href="#">Chính sách giao nhận</a>
+              </div>
+            </div>
+            <div class="footer-links-bottom">
+              <span
+                >Số ĐKKD: 41N8041309 cấp ngày 17/8/2018. Nơi cấp Ủy Ban Nhân Dân
+                <br />
+                Quận Tân Bình. Hộ Kinh Doanh:
+                <b>KINGSHOES. Hotline: 0909.300.746</b></span
+              >
+              <h2>CHỨNG NHẬN</h2>
+              <img src="./assets/img/logo-bo-cong-thuong.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-fanpage">
+            <h2>Fanpage</h2>
+
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKingshoes.vnn&tabs=timeline&width=400&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2048533015275135"
+              width="470"
+              height="300"
+              style="border: none; overflow: hidden"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/slider.js"></script>
 </html>

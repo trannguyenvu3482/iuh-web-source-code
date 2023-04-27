@@ -1,0 +1,328 @@
+/* Filter */
+
+.main-filter {
+  margin-top: 120px;
+  padding: 10px 15px 20px;
+  height: 106px;
+  background: rgb(241, 241, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-filter__item {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin-right: 30px;
+}
+
+.main-filter__item span {
+  font-style: italic;
+  text-transform: capitalize;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.main-filter__item select {
+  width: 330px;
+  height: 45px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: normal;
+  background: #fff;
+}
+
+.main-filter__btn {
+  border-radius: 0;
+  background: #fcd603;
+  border-color: #fcd603;
+  color: #000;
+  margin-top: 26px;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  padding: 12px 86px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main-filter__btn:hover {
+  background: #000;
+  color: #fcd603;
+}
+
+/* Product */
+.main-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1440px;
+}
+
+.main-product-top {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-product__image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-product__image-preview-item {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.main-product__image-preview-item:hover {
+  border: 3px solid #888;
+}
+
+.main-product__image-preview-item.active {
+  border: 3px solid #888;
+}
+
+.main-product__image-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-product__image-main {
+  height: 620px;
+  width: 620px;
+
+  background: url('https://kingshoes.vn/data/upload/media/gia%CC%80y-jordan-1-mid-tuft-orange-bq6931-802-king-shoes-sneaker-real-hcm-14.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-product__image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-product__info {
+  width: 444px;
+}
+
+.main-product__info-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-product__info-item:last-of-type {
+  border-bottom: none;
+}
+
+.main-product__info-ratings {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.main-product__info-ratings i {
+  font-size: 20px;
+  color: #ffb727;
+}
+
+.main-product__info-title {
+  margin: 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #313131;
+  text-transform: uppercase;
+}
+
+.main-product__info-shoes-id {
+  font-size: 18px;
+  color: #5b5b5b;
+}
+
+.main-product__info-shoes-id span {
+  font-weight: 700;
+}
+
+.main-product__info-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fb0000;
+  margin-top: 18px;
+}
+
+.main-product__info-subtitle {
+  font-size: 16px;
+  color: #313131;
+  margin-top: 6px;
+}
+
+.main-product__info-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.main-product__info-size {
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #313131;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-product__info-size:hover {
+  color: rgba(49, 49, 49, 0.5);
+}
+
+.main-product__info-size.active {
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.main-product__info-quantity {
+  margin-top: 14px;
+  display: flex;
+}
+
+.main-product__info-quantity input {
+  width: 50px;
+  height: 60px;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  font-size: 24px;
+  color: #999;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.main-product__info-quantity button {
+  width: 45px;
+  height: 60px;
+  border: 1px solid #e1e1e1;
+  background: #f5f5f5;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main-product__info-btns {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.main-product__info-btns button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 26px 13px 26px;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #000;
+  background-color: #fed700;
+  line-height: 25px;
+  border: none;
+  border-radius: 60px;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  border: 6px solid #eee;
+  cursor: pointer;
+}
+
+.main-product__info-btns-buy {
+  background: red !important;
+  color: white !important;
+
+  padding: 15px 42px 13px 42px !important;
+}
+
+.main-product__info-btns-add:hover,
+.main-product__info-btns-buy:hover {
+  background: #000 !important;
+  color: #fcd603 !important;
+}
+
+.main-product__info-call {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.main-product__info-call a {
+  font-size: 22px;
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-product__info-qr {
+  width: 90px;
+  height: 90px;
+  margin-top: 30px;
+}
+
+.main-product-bottom {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.main-product-bottom a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.main-product-bottom a:hover {
+  color: #fcd603;
+}
+
+.main-related-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.main-related-products__container {
+  width: 1440px;
+}
