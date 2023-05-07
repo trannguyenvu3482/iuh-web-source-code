@@ -483,13 +483,17 @@ header.sticky {
 }
 
 .main-section__grid-product img {
-  width: 100%;
-  height: 100%;
+  width: 258px;
+  height: 262px;
   object-fit: cover;
 }
 
 .main-section__grid-product-info {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .main-section__grid-product-info-title {
@@ -497,7 +501,7 @@ header.sticky {
   font-weight: 700;
   color: #5b5b5b;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .main-section__grid-product-info-ratings i {
@@ -510,8 +514,6 @@ header.sticky {
   font-size: 16px;
   font-weight: 700;
   color: #5b5b5b;
-  margin-bottom: 20px;
-  margin-top: 4px;
 }
 
 .main-section__grid-product-new-tag {
@@ -642,12 +644,18 @@ header.sticky {
 
 .news-list__item {
   width: 330px;
+  height: 550px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   position: relative;
   background: #fff;
   text-decoration: none;
+}
+
+.news-list__item img {
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
 }
 
 .news-list__item-info {

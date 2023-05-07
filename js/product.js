@@ -1,7 +1,6 @@
 import { getShoesById } from '../api/shoesAPI.js';
 
 let mainImage = document.querySelector('.main-product__image-main');
-let images = document.querySelectorAll('.main-product__image-preview-item');
 
 let sizes = document.querySelectorAll('.main-product__info-sizes');
 
@@ -51,23 +50,26 @@ mainImage.addEventListener('mouseleave', () => {
 });
 
 // Change image handler
-images.forEach((image) => {
-  image.addEventListener('click', (e) => {
-    // Remove active class from current image
-    document
-      .querySelector('.main-product__image-preview-item.active')
-      .classList.remove('active');
+document
+  .querySelector('.main-product__image-preview')
+  .addEventListener('click', (e) => {
+    console.log(e.target.closest('.main-product__image-preview-item'));
 
-    // Add active class to parent .main-product__image-preview-item element
-    e.target.parentElement.classList.add('active');
+    if (e.target.closest('.main-product__image-preview-item')) {
+      // Remove active class from current image
+      document
+        .querySelector('.main-product__image-preview-item.active')
+        .classList.remove('active');
 
-    // Update current image
-    currentImage = e.target;
+      // Add active class to current image
+      e.target
+        .closest('.main-product__image-preview-item')
+        .classList.add('active');
 
-    // Update main image
-    mainImage.style.backgroundImage = `url(${e.target.src})`;
+      // Change main image
+      mainImage.style.backgroundImage = `url(${e.target.getAttribute('src')})`;
+    }
   });
-});
 
 // Increase quantity handler
 plusQuantityBtn.addEventListener('click', () => {
