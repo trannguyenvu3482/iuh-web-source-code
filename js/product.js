@@ -1,8 +1,9 @@
 import { getShoesById } from '../api/shoesAPI.js';
+
 let mainImage = document.querySelector('.main-product__image-main');
 let images = document.querySelectorAll('.main-product__image-preview-item');
 
-let sizes = document.querySelectorAll('.main-product__info-size');
+let sizes = document.querySelectorAll('.main-product__info-sizes');
 
 const quantity = document.querySelector('.main-product__info-quantity-input');
 const minusQuantityBtn = document.querySelector(
@@ -11,6 +12,9 @@ const minusQuantityBtn = document.querySelector(
 const plusQuantityBtn = document.querySelector(
   '.main-product__info-quantity-plus'
 );
+const btnAddToCart = document.querySelector('.main-product__info-btns-add');
+
+let shoes;
 
 // Get query string from url
 const getQueryString = () => {
@@ -118,7 +122,7 @@ const loadUI = (shoes) => {
 
   // Update fields
   shoesName.textContent = shoes.name;
-  shoesID.textContent = shoes.id;
+  shoesID.textContent = shoes.shoes_id;
   price.textContent = shoes.price;
   subtitle.textContent = shoes.subtitle ? shoes.subtitle : '';
 
@@ -136,9 +140,41 @@ const loadUI = (shoes) => {
 document.addEventListener('DOMContentLoaded', async () => {
   const queryString = getQueryString();
   const productId = queryString.id;
-  const shoes = await getShoesById(productId);
+
+  shoes = await getShoesById(productId);
 
   console.log(shoes);
 
   loadUI(shoes);
+});
+
+// TODO: Add logic add to cart, change size
+btnAddToCart.addEventListener('click', () => {
+  const queryString = getQueryString();
+  const productId = queryString.id;
+  let cart = JSON.parse(localStorage.getItem('cart'));
+  const quantity = document.querySelector(
+    '.main-product__info-quantity-input'
+  ).value;
+  const size = document.querySelector(
+    '.main-product__info-size.active'
+  ).textContent;
+
+  cart.items.push({
+    id: productId,
+    quantity: quantity,
+    size: Number.parseInt(size, 10),
+    price: Number.parseInt(shoes.currentPrice, 10),
+  });
+
+  if (cart.totalPrice != null) {
+    cart.totalPrice += quantity * shoes.currentPrice;
+  } else {
+    cart.totalPrice = quantity * shoes.currentPrice;
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Forward to cart page
+  window.location.href = '/pages/cart.html';
 });

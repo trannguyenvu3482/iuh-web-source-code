@@ -9,7 +9,7 @@
 - Các công nghệ sử dụng trong Sub-project:
   - HTML5
   - SCSS thay cho CSS thuần, FontAwesome cho icon
-  - JavaScript (ES6), Axios để fetch dữ liệu thay cho fetch API, sessionStorage API
+  - JavaScript (ES6), Fetch API để fetch dữ liệu thay cho fetch API, sessionStorage và LocalStorage API
   - Chart.js cho biểu đồ thống kê
   - MockAPI để chứa dữ liệu, add dữ liệu vào từ trang <https://duz-kingshoes-crud-api.netlify.app/>
   - Github Pages để deploy
