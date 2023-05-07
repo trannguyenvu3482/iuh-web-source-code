@@ -9,7 +9,6 @@ const stickyHeader = () => {
   }
 };
 
-
 const cartQuantityUpdate = () => {
   const cart = JSON.parse(localStorage.getItem('cart'));
   if (cart.items.length > 0) {

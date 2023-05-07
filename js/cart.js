@@ -40,7 +40,7 @@ const getItemHTML = (shoes, item) => {
         <div class="cart-list__item-title">
           ${shoes.name}
         </div>
-        <span class="cart-list__item-size">Size Giày: 38.5</span>
+        <span class="cart-list__item-size">Size Giày: ${item.size}</span>
         <div class="cart-list__item-shoes-id">
           Mã SP: <span>${shoes.shoes_id}</span>
         </div>
