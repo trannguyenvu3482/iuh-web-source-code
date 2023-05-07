@@ -269,3 +269,31 @@ main {
 .cart-info__contact-info-bottom a:hover {
   color: #000;
 }
+
+.no-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.no-products h1 {
+  text-transform: uppercase;
+}
+
+.no-products > a {
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.no-products > a:hover {
+  color: #ffd600;
+}
+
+.callNow {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}

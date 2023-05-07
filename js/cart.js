@@ -1,7 +1,5 @@
 import { getShoesById } from '../api/shoesAPI.js';
 
-let itemQuantityDecBtns;
-let itemQuantityIncBtns;
 let cart;
 
 // cart = {
@@ -78,9 +76,6 @@ const getItemHTML = (shoes, item) => {
 };
 
 const loadDataToUI = async () => {
-  // Get cart
-  cart = JSON.parse(localStorage.getItem('cart'));
-
   // Load data to UI
   const cartList = document.querySelector('.cart-list');
 
@@ -118,16 +113,33 @@ const loadDataToUI = async () => {
 
 // Onload event
 window.addEventListener('DOMContentLoaded', async () => {
-  await loadDataToUI();
-  console.log('Load data to UI');
+  // Get cart
+  cart = JSON.parse(localStorage.getItem('cart'));
 
-  handleRemoveItem();
-  console.log('Handle remove item');
+  if (cart.items.length > 0) {
+    await loadDataToUI();
+    console.log('Load data to UI');
 
-  handleQuantityBtns();
-  console.log('Handle quantity');
+    handleRemoveItem();
+    console.log('Handle remove item');
 
-  updateCartTotalPrice();
+    handleQuantityBtns();
+    console.log('Handle quantity');
+
+    updateCartTotalPrice();
+  } else {
+    document.querySelector('.cart-container').innerHTML = `
+      <div class="no-products">
+        <h1 class="title-none">Giỏ hàng</h1>
+      
+        <p class="text-none">Không có sản phẩm nào trong giỏ hàng</p>
+        <a href="/index.html" class="back-home-btn"> Về trang chủ</a>
+        <div class="callship text-center">
+          Khi cần trợ giúp vui lòng gọi <a class="callNow" href="tel:0909300746">0909300746</a>
+        </div>
+      </div>
+    `;
+  }
 });
 
 // Handle remove item
@@ -135,7 +147,10 @@ const handleRemoveItem = () => {
   const itemList = document.querySelector('.cart-list');
 
   itemList.addEventListener('click', (e) => {
-    if (e.target.classList.contains('cart-list__item-remove-btn')) {
+    if (
+      e.target.classList.contains('cart-list__item-remove-btn') ||
+      e.target.closest('.cart-list__item-remove-btn')
+    ) {
       const item = e.target.closest('.cart-list__item');
       const itemIndex = Array.from(item.parentElement.children).indexOf(item);
 
@@ -164,6 +179,20 @@ const handleRemoveItem = () => {
           }).format(cart.totalPrice)}
         </span>
       `;
+
+      if (cart.items.length === 0) {
+        document.querySelector('.cart-container').innerHTML = `
+        <div class="no-products">
+          <h1 class="title-none">Giỏ hàng</h1>
+        
+          <p class="text-none">Không có sản phẩm nào trong giỏ hàng</p>
+          <a href="/index.html" class="back-home-btn"> Về trang chủ</a>
+          <div class="callship text-center">
+            Khi cần trợ giúp vui lòng gọi <a class="callNow" href="tel:0909300746">0909300746</a>
+          </div>
+        </div>
+      `;
+      }
     }
   });
 };
