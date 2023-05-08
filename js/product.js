@@ -154,6 +154,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 btnAddToCart.addEventListener('click', () => {
   const queryString = getQueryString();
   const productId = queryString.id;
+
+  if (!localStorage.getItem('cart')) {
+    const cart = {
+      items: [],
+      totalPrice: 0,
+    };
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
   let cart = JSON.parse(localStorage.getItem('cart'));
   const quantity = document.querySelector(
     '.main-product__info-quantity-input'

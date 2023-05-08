@@ -93,4 +93,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   hotProductsTag.innerHTML = hotProductsHTML;
   saleProductsTag.innerHTML = saleProductsHTML;
   accessoriesTag.innerHTML = accessoriesHTML;
+
+  // Check if cart has already existed in localStorage, if not create
+  if (!localStorage.getItem('cart')) {
+    const cart = {
+      items: [],
+      totalPrice: 0,
+    };
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
 });
