@@ -100,6 +100,10 @@
 
 /* Phone: 767px and below */
 @media screen and (max-width: 767px) {
+  .main-slider {
+    height: 300px;
+  }
+
   .header__bottom-search-btn {
     display: flex;
   }
