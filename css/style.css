@@ -11,8 +11,6 @@
 
 body {
   font-family: 'Sarabun', sans-serif;
-
-  height: 200vh;
 }
 
 .container {
@@ -20,6 +18,7 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 
 /* ---------------------------------------------------- */
@@ -273,6 +272,7 @@ header.sticky {
   transition: all 0.4s ease;
   cursor: pointer;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .header__bottom-cart-link:hover {
@@ -296,6 +296,35 @@ header.sticky {
   border-radius: 50%;
   background-color: #fed700;
   color: #000;
+}
+
+.header__bottom-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #fed700;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: none;
+  margin-left: 20px;
+}
+
+.header__bottom-search-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #000;
+  background-color: #ddd;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: none;
 }
 
 /* ---------------------------------------------------- */
