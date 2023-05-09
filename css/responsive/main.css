@@ -1,0 +1,167 @@
+/* Responsive for homepage */
+
+/* Laptop L: 1441px and above */
+@media only screen and (min-width: 1441px) {
+}
+
+/* All */
+
+@media only screen and (max-width: 1440px) {
+  .header__bottom-menu {
+    display: none;
+  }
+
+  .header__bottom-menu-btn {
+    display: flex;
+  }
+
+  .main-container {
+    width: 100%;
+  }
+
+  .hot-products-list {
+    flex-wrap: wrap;
+  }
+
+  .news-list__item {
+    width: fit-content;
+  }
+
+  .news-list__item img {
+    width: 100%;
+  }
+}
+
+/* Laptop: 1024px to 1440px */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main-section__grid-products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main-subscribe {
+    gap: 60px;
+    text-align: center;
+  }
+
+  .main-subscribe-input {
+    width: 400px;
+  }
+
+  .footer-container {
+    margin-left: 30px;
+  }
+
+  .footer-links-top {
+    gap: 40px;
+  }
+
+  .footer-fanpage {
+    margin-left: 20px;
+  }
+}
+/* Tablet: 768px to 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-slider {
+    height: 300px;
+  }
+
+  .main-slider-btn {
+    top: 140px;
+  }
+
+  .main-hero {
+    padding: 40px 10px;
+  }
+
+  .main-section__grid-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-list {
+    flex-wrap: wrap;
+  }
+
+  .footer-container {
+    margin: 0;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-info {
+    width: 50%;
+  }
+
+  .footer-fanpage {
+    width: 40%;
+  }
+}
+
+/* Phone: 767px and below */
+@media screen and (max-width: 767px) {
+  .header__bottom-search-btn {
+    display: flex;
+  }
+
+  .header__bottom-search-box {
+    display: none;
+  }
+
+  .header__bottom-logo img {
+    width: 160px;
+  }
+
+  .main-section__grid-products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .main-section__grid-products {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .main-section__grid-product {
+    height: initial;
+  }
+
+  .hot-products-list {
+    text-align: center;
+  }
+
+  .news-list {
+    flex-wrap: wrap;
+  }
+
+  .main-subcribe-text {
+    display: none;
+  }
+
+  .main-subscribe-input {
+    width: 400px;
+  }
+
+  .main-subcribe-tag {
+    display: none;
+  }
+
+  .footer-container {
+    margin: 0;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
+
+  .footer-fanpage {
+    width: 100%;
+  }
+}
