@@ -1,0 +1,146 @@
+/* Responsive for product page */
+
+/* Laptop L: 1441px and above */
+@media only screen and (min-width: 1441px) {
+}
+
+/* All */
+
+@media only screen and (max-width: 1440px) {
+  .main-filter__btn {
+    padding: 12px 40px;
+  }
+
+  .main-filter__item-select > select {
+    width: 200px;
+  }
+
+  .product-container {
+    width: 100%;
+  }
+
+  .main-product-bottom > iframe {
+    width: 100%;
+  }
+
+  .main-section__grid-product {
+    width: 240px;
+  }
+
+  .main-section__grid-product > img {
+    width: 100%;
+  }
+
+  .main-section__grid-product:last-of-type {
+    display: none;
+  }
+
+  .main-related-products__container {
+    width: 100%;
+  }
+}
+
+/* Laptop: 1024px to 1440px */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main-product__info-btns > button {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}
+/* Tablet: 768px to 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-filter__btn {
+    padding: 12px 20px;
+  }
+
+  .main-filter__item-select > select {
+    width: 140px;
+  }
+
+  .main-product-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-product__image-preview {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-product__image-main {
+    width: 90%;
+  }
+
+  .main-section__grid-product {
+    width: 200px;
+  }
+
+  .main-section__grid-product > img {
+    width: 100%;
+  }
+
+  .main-section__grid-product:last-of-type {
+    display: none;
+  }
+
+  .main-related-products__container {
+    width: 100%;
+  }
+}
+
+/* Phone: 767px and below */
+@media screen and (max-width: 767px) {
+  .main-filter {
+    display: none;
+  }
+
+  .main-product-top {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  .main-product__image-preview {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-product__image-main {
+    width: 90%;
+    height: 300px;
+  }
+
+  .main-product__info {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .main-section__grid-product {
+    width: 200px;
+  }
+
+  .main-section__grid-product > img {
+    width: 100%;
+  }
+
+  .main-section__grid-product:last-of-type {
+    display: none;
+  }
+
+  .main-product__info-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-product__info-btns > button {
+    font-size: 18px;
+  }
+
+  .main-related-products__container {
+    width: 100%;
+  }
+
+  .hot-products-list {
+    flex-direction: column;
+  }
+}
